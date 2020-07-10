@@ -21,9 +21,15 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**\/*",
+                "input": "node_modules/@po-ui/style/images",
+                "output": "assets/images"
+              }
             ],
             "styles": [
+              "./node_modules/@po-ui/style/css/po-theme-default.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -88,6 +94,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@po-ui/style/css/po-theme-default.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -119,6 +126,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "swapi"
+    }
+  },
+  "defaultProject": "swapi",
+  "cli": {
+    "analytics": "52ce1735-6f4d-4252-9294-8c41a38000ea"
+  }
 }

@@ -1,0 +1,60 @@
+<app-menu></app-menu>
+<div class="po-wrapper-menu-panel">
+    <po-page-detail [p-title]="title">
+
+        <div class="po-row" class="po-md-12">
+
+            <div *ngFor="let films of films['results']" class="po-md-4">
+
+                <div class="flip-container">
+                    <div class="flipper">
+                        <div class="front">
+                            <po-container class="po-m-12">
+
+                                <img src="../../assets/films/{{films.title}}.jpg" />
+                            </po-container>
+                        </div>
+                        <div class="back">
+                            <po-container class="po-md-12">
+                                <div class="po-md-1">
+                                    <po-info class="po-md-4" p-label="Title" [p-value]="films.title"> </po-info>
+                                    <po-info class="po-md-4" p-label="Director" [p-value]="films.director"> </po-info>
+                                    <po-info class="po-md-4" p-label="Producer" [p-value]="films.producer"> </po-info>
+
+
+                                    <po-button p-label="Summary" (p-click)="modal.open()"> </po-button>
+                                </div>
+                            </po-container>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <po-modal #modal p-title={{films.title}}>
+                    {{films.opening_crawl}}
+                    <br>
+                    <br>
+                    <b>Release: {{films.release_date}} </b>
+
+                </po-modal>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+            </div>
+        </div>
+    </po-page-detail>
+</div>

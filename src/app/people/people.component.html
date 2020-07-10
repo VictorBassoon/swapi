@@ -1,0 +1,45 @@
+<app-menu></app-menu>
+<div class="po-wrapper-menu-panel">
+    <po-page-detail [p-title]="title">
+        <po-container>
+            <div class="po-row">
+                <div *ngFor="let people of people['results']">
+                    <po-avatar (p-click)="printData(people)" p-size="lg" p-src="./assets/images/{{people.name}}.png">
+                    </po-avatar>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+
+            </div>
+                <po-button-group class="po-xl-6 po-lg-6 po-md-12 po-sm-12" [p-buttons]="buttons"> </po-button-group>
+            <br>
+            <br>
+        </po-container>
+        <br>
+
+        <po-container>
+            <div class="po-row">
+                <po-info class="po-md-4" p-label="Name" [p-value]="name"> </po-info>
+                <po-info class="po-md-4" p-label="Birth Year" [p-value]="birthYear"> </po-info>
+                <po-info class="po-md-4" p-label="Gender" [p-value]="gender"> </po-info>
+            </div>
+
+            <hr />
+
+            <div class="po-row">
+                <po-info class="po-md-4" p-label="Eye Color" [p-value]="eyeColor"> </po-info>
+                <po-info class="po-md-4" p-label="Hair Color" [p-value]="hairColor"> </po-info>
+                <po-info class="po-md-4" p-label="Height" [p-value]="height"> </po-info>
+                <po-info class="po-md-4" p-label="Mass" [p-value]="mass"> </po-info>
+            </div>
+
+            <hr />
+
+            <div class="po-row">
+                <po-info class="po-md-4" p-label="Homeworld" [p-value]="homeworld"> </po-info>
+                <po-info class="po-md-4" p-label="Species" [p-value]="species"> </po-info>
+            </div>
+        </po-container>
+    </po-page-detail>
+</div>
